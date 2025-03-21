@@ -79,9 +79,6 @@
     function startSurprise() {
       // Reproduce la canción MP3
         document.getElementById("surpriseMusic").play();
-      
-      //Muestra cuadro amarillo
-      document.getElementById("messageBox").style.display="block";
     
       // Empieza a hacer caer flores y balones
       setInterval(() => {
@@ -91,6 +88,9 @@
         img.style.left = Math.random() * window.innerWidth + 'px';
         img.style.animationDuration = (3 + Math.random() * 2) + 's';
         document.body.appendChild(img);
+
+        //Muestra cuadro amarillo
+      document.getElementById("messageBox").style.display="block";
 
         // Eliminar después de caer
         setTimeout(() => img.remove(), 6000);
