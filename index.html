@@ -54,8 +54,7 @@
   <button onclick="startSurprise()">Pica aquí para abrirla</button>
 
   <!-- Video oculto para que suene la canción -->
-  <iframe id="surpriseVideo" allow="autoplay" allowfullscreen></iframe>
-
+  <audio id="surpriseMusic" src="flores amarillas.mp3"></audio>
   <script>
     const images = [
       'img/balon.png', // Reemplaza con tu imagen de balón
@@ -63,10 +62,9 @@
     ];
 
     function startSurprise() {
-      // Reproduce la canción desde YouTube en invisible
-      const surpriseVideo = document.getElementById('surpriseVideo');
-      surpriseVideo.src = 'https://www.youtube.com/embed/S7gMzYqXIZc?autoplay=1';
-
+      // Reproduce la canción MP3
+        document.getElementById("surpriseMusic"),play();
+    
       // Empieza a hacer caer flores y balones
       setInterval(() => {
         const img = document.createElement('img');
