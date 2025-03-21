@@ -57,13 +57,13 @@
   <audio id="surpriseMusic" src="floresamarillas.mp3"></audio>
   <script>
     const images = [
-      'img/balon.gif', // Reemplaza con tu imagen de balón
-      'img/flor.gif'   // Reemplaza con tu imagen de flor
+      'balon.gif', // Reemplaza con tu imagen de balón
+      'flor.gif'   // Reemplaza con tu imagen de flor
     ];
 
     function startSurprise() {
       // Reproduce la canción MP3
-        document.getElementById("surpriseMusic"),play();
+        document.getElementById("surpriseMusic").play();
     
       // Empieza a hacer caer flores y balones
       setInterval(() => {
