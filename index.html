@@ -26,7 +26,7 @@
     }
     .falling {
       position: absolute;
-      width: 100px;
+      width: 130px;
       animation: fall linear infinite;
       z-index: 1000;
     }
@@ -79,7 +79,7 @@
     function startSurprise() {
       // Reproduce la canción MP3
         document.getElementById("surpriseMusic").play();
-    
+      
       // Empieza a hacer caer flores y balones
       setInterval(() => {
         const img = document.createElement('img');
@@ -89,12 +89,16 @@
         img.style.animationDuration = (3 + Math.random() * 2) + 's';
         document.body.appendChild(img);
 
-        //Muestra cuadro amarillo
-      document.getElementById("messageBox").style.display="block";
 
         // Eliminar después de caer
         setTimeout(() => img.remove(), 6000);
       }, 300);
+
+       //Muestra cuadro amarillo
+      setTimeout(() => {
+        document.getElementById("messageBox").style.display="block";
+      }, 3000); //espera 3 seg antes de mostrar mensaje
+    
     }
   </script>
 </body>
